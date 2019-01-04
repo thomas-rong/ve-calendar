@@ -46,11 +46,15 @@
                         }" v-for="(row,index) in monthData.slice((line-1)*7,line*7)" :key="`grid_${index}`"                        
                         >
                             <div class="day-title" :class="{mini:currentMode==='mini'}">
+                                <div class="day-rest" :class="{mini:currentMode==='mini'}" v-if="getHoliday(row)">
+                                    <slot name="day-rest" :day="row">休</slot>
+                                </div>
                                 <div class="day-number" :class="{mini:currentMode==='mini'}">
                                     <slot name="day-number" :day="row">
                                         <div :style="getHoliday(row)">{{row.sDay}}</div>
                                     </slot>
                                 </div>
+                                <div class="day-rest-append" :class="{mini:currentMode==='mini'}" v-if="getHoliday(row)"/>
                                 <div v-if="currentMode==='normal' && lunar" class="day-lunar"  :style="`color:${row.color}`" :title="getLunar(row)">
                                     <slot name="day-lunar" :day="row">
                                         <span v-if="lang==='zh-cn'">{{getLunar(row,3)}}</span>

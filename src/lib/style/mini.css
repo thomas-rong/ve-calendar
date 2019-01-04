@@ -55,7 +55,7 @@ input[type="number"].ve-year.mini:hover::-webkit-inner-spin-button {
 }
 
 .day-title.mini {
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .day-number.mini {
@@ -86,4 +86,11 @@ input[type="number"].ve-year.mini:hover::-webkit-inner-spin-button {
   font-size: 12px;
   justify-content: center;
   width: auto;
+}
+
+.day-rest.mini {
+  width: 16px;
+  height: 18px;
+  font-size: 10px;
+  margin-right: 0;
 }

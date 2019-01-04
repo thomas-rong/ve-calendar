@@ -249,3 +249,21 @@ input[type="number"].ve-year:hover::-webkit-inner-spin-button {
 .dropdown-content .dropdown-month:hover {
   background-color: #409eff;
 }
+
+.day-rest {
+  width: 20px; 
+  height: 20px; 
+  background: red; 
+  color:white; 
+  font-size: 13px;
+  font-weight:bolder; 
+  padding-left:3px;
+  margin-right: 5px;
+  -moz-border-radius: 50px;  
+  -webkit-border-radius: 50px; 
+  border-radius: 50px;
+}
+
+.day-rest-append {
+  width: 20px; 
+}
